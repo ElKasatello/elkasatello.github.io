@@ -40,9 +40,9 @@ suite('Unit Tests', function () {
     });
     // #6
     test('#strictEqual, #notStrictEqual', function () {
-      assert.StrictEqual(6, '6');
+      assert.notStrictEqual(6, '6');
       assert.strictEqual(6, 3 * 2);
-      assert.StrictEqual(6 * '2', 12);
+      assert.strictEqual(6 * '2', 12);
       assert.notStrictEqual([1, 'a', {}], [1, 'a', {}]);
     });
     // #7
@@ -61,10 +61,10 @@ suite('Unit Tests', function () {
   suite('Comparisons', function () {
     // #8
     test('#isAbove, #isAtMost', function () {
-      assert.fail('hello'.length, 5);
-      assert.fail(1, 0);
-      assert.fail(Math.PI, 3);
-      assert.fail(1 - Math.random(), 1);
+      assert.isAbove('hello'.length, 5);
+      assert.isAbove(1, 0);
+      assert.isAtMost(Math.PI, 3);
+      assert.isAtMost(1 - Math.random(), 1);
     });
     // #9
     test('#isBelow, #isAtLeast', function () {
